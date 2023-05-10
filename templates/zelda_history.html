@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Have a seat over there please</title>
+  </head>
+
+  <body>
+
+
+    <div id="main-nav">
+      <nav>
+        <ul>
+          <a href="{{ url_for('index') }}">Home</a>
+          <a href="{{ url_for('zelda_history') }}">History</a>
+          <a href="{{ url_for('forum') }}">Forum</a>
+          <a href="{{ url_for('music') }}">Music</a>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="zelda-games" id="history">
+      <div id="zelda-introtxt">
+      <h1><p>A hero in green. He wields a sword, casts spells and is on a quest to save a princess and the rest of the world. That is how it started. Besides the critical acclaim, Link's adventures
+        have influenced the art of video games in profound ways and the series continue to do so with new installments. In this special we present to you the
+        most important games of the series.
+      </p></h1>
+    </div>
+      <a href="#botw"><img src="{{ url_for('static', filename='images/botw-logo.jpg') }}" alt="botw logo" width="350px"></a>
+      <a href="#skyward"><img src="{{ url_for('static', filename='images/skyward-logo.jpg') }}" alt="skyward sword logo" width="450px"></a>
+      <a href="#twilight"></a>
+      <a href="#windwaker"><img src="{{ url_for('static', filename='images/windwaker-logo.jpg') }}" alt="wind waker logo" width="350px"></a>
+      <a href="#majora"><img src="{{ url_for('static', filename='images/majora-logo.jpg') }}" alt="majora logo" width="450px"></a>
+      <a href="#ocarina"><img src="{{ url_for('static', filename='images/ocarina-logo.jpg') }}" alt="ocarina of time logo" width="350px"></a>
+      <a href="#past"><img src="{{ url_for('static', filename='images/past-logo.jpg') }}" alt="link to the past logo" width="350px"></a>
+      <a href="#original"><img src="{{ url_for('static', filename='images/original-logo.jpg') }}" alt="original logo" width="450px"></a>
+  </section>
+
+
+
+  <div class="logo-container">
+  <section class="zelda-games" id="botw">
+    <img src="{{ url_for('static', filename='images/botw-logo.jpg') }}" alt="botw logo" width="350px">
+  </section>
+
+  <section class="zelda-games" id="skyward">
+    <img src="{{ url_for('static', filename='images/skyward-logo.jpg') }}" alt="skyward sword logo" width="350px">
+  </section>
+
+  <section class="zelda-games" id="twilight">
+    <img src="{{ url_for('static', filename='images/twilight-logo.jpg') }}" alt="twilight logo" width="350px">
+  </section>
+
+  <section class="zelda-games" id="windwaker">
+    <img src="{{ url_for('static', filename='images/windwaker-logo.jpg') }}" alt="wind waker logo" width="350px">
+  </section>
+
+  <section class="zelda-games" id="majora">
+    <img src="{{ url_for('static', filename='images/majora-logo.jpg') }}" alt="majora logo" width="350px">
+  </section>
+
+  <section id="ocarina">
+    <img src="ocarina-logo.jpg"  width="350px">
+    <img src="{{ url_for('static', filename='images/ocarina-logo.jpg') }}" alt="ocarina of time logo" width="350px">
+  </section>
+
+  <section class="zelda-games" id="past">
+      <img src="past-logo.jpg"  width="350px">
+      <img src="{{ url_for('static', filename='images/past-logo.jpg') }}" alt="link to the past logo" width="350px">
+    </section>
+
+  <section class="zelda-games" id="original">
+    <img src="{{ url_for('static', filename='images/original-logo.jpg') }}" alt="original logo" width="350px">
+  </section>
+  </div>
+</html>

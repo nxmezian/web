@@ -1,0 +1,17 @@
+{% extends "forumbase.html" %}
+
+{% block main %}
+
+<section class="login">
+    <form action="/register" method="post">
+        <input autocomplete="off" id="username" name="username" placeholder="Enter a username" type="text">
+        <input autocomplete="off" id="email" name="email" placeholder="Enter your email address" type="text">
+        <input autocomplete="off" id="password" name="password" placeholder="Enter a password" type="password">
+        <input autocomplete="off" id="password" name="password_repeat" placeholder="Enter the same password" type="password">
+        <input type="hidden" name="registration_date" value="{{ now }}">
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+
+{% endblock %}

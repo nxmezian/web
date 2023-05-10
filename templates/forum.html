@@ -1,0 +1,35 @@
+{% extends "forumbase.html" %}
+
+{% block main %}
+{% include "navigation_bar.html"%}
+
+
+    {% if session["is_logged_in"] == True %}
+    <p class="subforum hundred">Logged in as <b>{{ session["username"] }}</b></p>
+    {% else %}
+    <p class="subforum hundred">Welcome</b></p>
+    {% endif %}
+
+
+    {% for subforum in subforums %}
+    {{ subforum[0] }}
+    <div class="subforum">
+      <h1><a href="{{ url_for('subforum' , subforum_id=subforum[0]) }}">{{ subforum[1] }}</a></h1>
+      <hr class="subforum-header-line">
+        {% for thread in threads %}
+          {% if thread[5] == subforum[0] %}
+            <h3 class="margin-left"><a href="{{ url_for('thread', thread_id=thread[0], subforum_id=subforum[0]) }}">{{ thread[1] }}</a></h3>
+            {% for post in posts %}
+              {% if thread[0] == post[2] %}
+                <p class="post">Posted by: {{ post[7] }} <br>
+                {{ post[4] }}</p>
+              {% endif %}
+            {% endfor %}
+            <hr class="thread-header-line">
+          {% endif %}
+        {% endfor %}
+        <button><a href="{{ url_for('create_thread', subforum_id=subforum[0]) }}">Create a new thread in {{ subforum[1] }}</a></button>
+      </div>
+    {% endfor %}
+
+{% endblock %}

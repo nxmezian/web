@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Have a seat over there please</title>
+  </head>
+
+  <section id="home">
+  <div id="main-nav">
+    <nav>
+      <ul>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('zelda_history') }}">History</a>
+        <a href="{{ url_for('forum') }}">Forum</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('music') }}">Music</a>
+      </ul>
+    </nav>
+  </div>
+  </section>
+
+
+
+
+</html>

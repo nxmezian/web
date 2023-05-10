@@ -1,0 +1,166 @@
+body{
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: sans-serif;
+}
+
+ul {
+  display: inline;
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-radius: 25px;
+  border-color:black;
+}
+
+li{
+  display: inline;
+  background-color: black;
+}
+
+.hundred{
+  padding-top: 100px;
+}
+
+img {
+  max-width: 100%; height: auto;
+}
+
+#logo{
+  position: absolute;
+  left: 42%;
+  top: 10%;
+}
+
+#home{
+  height: 1000px;
+  background-image: url("/static/images/zelda.jpg");
+  background-size: cover;
+}
+
+.zelda-games {
+  height: 1000px;
+  background-size: cover;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 50px;
+}
+
+#history {
+  background-image: url("/static/images/history.jpg");
+}
+
+#zelda-introtxt{
+  margin-top: 50px;
+  border: 5px solid black;
+}
+
+#botw {
+  background-image: url("/static/images/botw.jpg");
+}
+
+#skyward {
+  background-image: url("/static/images/skyward1.jpg");
+}
+
+#twilight {
+  background-image: url("/static/images/twilight.jpg");
+}
+
+#windwaker {
+  background-image: url("/static/images/windwaker.jpg");
+}
+
+#majora {
+  background-image: url("/static/images/majora.jpg");
+}
+
+#ocarina {
+  background-image: url("/static/images/ocarina.jpg");
+}
+
+#past {
+  background-image: url("/static/images/past.jpg");
+}
+
+#original {
+  background-image: url("/static/images/original.jpg");
+}
+
+#sign-up{
+    text-align: center;
+}
+
+#history-nav{
+  text-align: left;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  background-color: red;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+#main-nav {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #090909;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#main-nav a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-nav a:hover {
+  color: #c1c1c1;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+}
+
+a:active {
+  color: blue;
+}
+
+nav a.active {
+  color: #1e1e1e;
+  background: white;
+}
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 11px;
+  }
+}
