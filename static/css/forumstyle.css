@@ -4,6 +4,41 @@
     text-decoration: none;
 }
 
+#main-nav {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  top: 0;
+}
+
+#main-nav a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-nav a:hover {
+  color: #c1c1c1;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+}
+
+a:active {
+  color: blue;
+}
+
+nav a.active {
+  color: #1e1e1e;
+  background: white;
+}
+
 body{
     background-image: url("/static/images/zelda-forum.jpg");
     background-size: cover;
@@ -52,21 +87,22 @@ body{
     border: 5px solid black;
     border-radius: 10px;
     padding: 10px;
+    padding-bottom: 25px;
     width: 130vh;
     margin-left: 40vh;
+    margin-bottom: 25px;
   }
 
-  .subforum:last-child {
-   margin-bottom: 10vh;
-  }
+.subforum:last-child {
+  margin-bottom: 50px;
+}
 
-
-.post{
+.post {
   border: 1px solid black;
   border-radius: 5px;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  padding-left: 5px;
+  padding: 25px 5px; /* Consolidated padding shorthand */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .subforum-header-line{
@@ -81,44 +117,6 @@ body{
 .thread-header-line{
   background-color: black;
   height: 5px;
-}
-
-#main-nav {
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #090909;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-#main-nav a {
-  color: #ffd700;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin: 0 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: all 0.3s ease-in-out;
-}
-
-#main-nav a:hover {
-  color: #c1c1c1;
-}
-
-#main-nav.sticky {
-  position: fixed;
-  top: 0;
-}
-
-a:active {
-  color: blue;
-}
-
-nav a.active {
-  color: #1e1e1e;
-  background: white;
 }
 
 @media

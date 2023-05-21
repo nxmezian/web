@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block main %}
-
-    <div class="subforum hundred">
+    <div class="subforum">
       {% for thread in threads %}
         <h2><a href="{{ url_for('thread', subforum_id=subforum_id, thread_id=thread[0]) }}">{{ thread[1] }}</a></h2>
           {% for post in posts %}

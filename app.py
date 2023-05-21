@@ -89,7 +89,7 @@ def create_thread(subforum_id):
         conn.commit()
         cursor.execute("SELECT thread_id FROM threads WHERE thread_title=?", (thread_title,))
         thread_id = cursor.fetchone()[0]
-        posted_by = session["username"]
+        posted_by =session["username"]
         cursor.execute("INSERT INTO posts (post_content,thread_title, thread_id, posted_by) VALUES(?,?,?,?)", (first_post, thread_title,thread_id,posted_by,))
         conn.commit()
         conn.close()
@@ -104,11 +104,10 @@ def thread(subforum_id,thread_id):
     thread_data = cursor.fetchone()
     cursor.execute("SELECT * FROM posts WHERE thread_id=?", (thread_id,))
     post_data = cursor.fetchall()
-    posted_by = session["username"]
     conn.close()
 
     # Pass the retrieved posts to a Jinja template for rendering
-    return render_template("thread.html", subforum_id = subforum_id,thread_id=thread_id, threads=thread_data, posts=post_data, posted_by=posted_by)
+    return render_template("thread.html", subforum_id = subforum_id,thread_id=thread_id, threads=thread_data, posts=post_data,)
 
 @app.route('/thread/<int:subforum_id>/<int:thread_id>/reply', methods=["GET", "POST"])
 def reply(subforum_id, thread_id):
@@ -124,9 +123,21 @@ def reply(subforum_id, thread_id):
         conn.close()
         return redirect(url_for('thread', subforum_id=subforum_id, thread_id=thread_id))
 
+@app.route("/history")
+def history():
+    return render_template("history.html")
+
 @app.route("/zelda_history")
 def zelda_history():
     return render_template("zelda_history.html")
+
+@app.route("/mario_history")
+def mario_history():
+    return render_template("mario_history.html")
+
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
