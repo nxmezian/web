@@ -1,7 +1,9 @@
+{% extends "forumbase.html" %}
+
 {% block main %}
-
-Username: {{ session["username"] }}
-Email address: {{ session["email"] }}
-Email address: {{ session["registration_date"] }}
-
+    <div class="subforum">
+        Username: {{ session["username"] }} <br>
+        Email address: {{ session["email"] }} <br>
+    </div>
 {% endblock %}
+

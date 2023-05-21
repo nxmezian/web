@@ -1,13 +1,8 @@
 {% extends "forumbase.html" %}
 
 {% block main %}
-
-    <div class="hundred">
-      
-    </div>
-
     <div class="subforum">
-    <h2 >{{ threads[1] }}</h2>
+    <h2>{{ threads[1] }}</h2>
     {% for post in posts %}
       {% if post[2] == threads[0] %}
       <p class="post">Posted by: {{ post[7] }} <br>
@@ -16,11 +11,13 @@
     {% endfor %}
   </div>
 
+  {% if session["is_logged_in"] == True %}
   <form class="subforum" action="{{ url_for('reply', subforum_id=subforum_id, thread_id=thread_id) }}" method="POST">
     <input id="reply" name="reply" placeholder="Reply">
     <input type="hidden" name="subforum_id" value="{{ subforum_id }}">
     <input type="hidden" name="thread_id" value="{{ thread_id }}">
     <button type="submit">Reply</button>
   </form>
+  {% endif %}
 
 {% endblock %}

@@ -1,0 +1,12 @@
+{% extends "historybase.html" %}
+
+{% block main %}
+    <article class="games" id="history">
+        <div id="history-links">
+            <a href="{{ url_for('zelda_history') }}"><img src="{{ url_for('static', filename='images/original-logo.jpg') }}" alt="Legend of Zelda logo"
+                width="150"></a></ul>
+            <a href="{{ url_for('mario_history') }}"><img src="{{ url_for('static', filename='images/odyssey-logo.jpg') }}" alt="Super Mario logo" width="150"></a></ul>
+        </div>
+    </article>
+
+{% endblock %}

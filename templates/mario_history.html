@@ -1,0 +1,49 @@
+{% extends "historybase.html" %}
+
+{% block main %}
+
+<article class="games" id="mario-timeline">
+    <section class="logos">
+    <a href="#odyssey"><img src="{{ url_for('static', filename='images/sixtyfour-logo.jpg') }}" alt="original logo">
+    <span class="year">1986</span></a>
+
+    <a href="#sunshine"><img src="{{ url_for('static', filename='images/sunshine-logo.jpg') }}" alt="link to the past logo">
+    <span class="year">1991</span></a>
+
+    <a href="#world"><img src="{{ url_for('static', filename='images/world-logo.jpg') }}" alt="ocarina of time logo">
+    <span class="year">1998</span></a>
+
+    <a href="#sixtyfour"><img src="{{ url_for('static', filename='images/sixtyfour-logo.jpg') }}" alt="majora logo">
+    <span class="year">2000</span></a>
+
+    <a href="#sunshine"><img src="{{ url_for('static', filename='images/sunshine-logo.jpg') }}" alt="twilight princess logo">
+    <span class="year">2006</span></a>
+
+    <a href="#galaxy"><img src="{{ url_for('static', filename='images/galaxy-logo.jpg') }}" alt="wind waker logo">
+    <span class="year">2002</span></a>
+
+    <a href="#world3d"><img src="{{ url_for('static', filename='images/world3d-logo.jpg') }}" alt="skyward sword logo">
+    <span class="year">2011</span></a>
+
+    <a href="#odyssey"><img src="{{ url_for('static', filename='images/odyssey-logo.jpg') }}" alt="botw logo">
+    <span class="year">2016</span></a>
+  </section>
+  </article>
+
+<section class="games" id="odyssey"></section>
+
+<section class="games" id="world3d"></section>
+
+<section class="games" id="galaxy2"></section>
+
+<section class="games" id="galaxy"></section>
+
+<section class="games" id="sunshine"></section>
+
+<section class="games" id="sixtyfour"></section>
+
+<section class="games" id="world"></section>
+
+<section class="games" id="bros"></section>
+
+{% endblock %}

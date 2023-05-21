@@ -25,11 +25,12 @@ li{
 }
 
 .hundred{
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
-img {
-  max-width: 100%; height: auto;
+article img {
+  height: 100px;
+  width:150px;
 }
 
 #logo{
@@ -39,27 +40,69 @@ img {
 }
 
 #home{
-  height: 1000px;
   background-image: url("/static/images/zelda.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#histendo-home{
+  margin-top: 7vh;
+  justify-content: center;
+}
+
+#history{
+  background-image: url("/static/images/history-wallpaper.jpg");
+}
+
+#history-links{
+  padding-top: 100px;
+}
+
+.games {
+  height: 100vh;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
 }
 
-.zelda-games {
-  height: 1000px;
-  background-size: cover;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 50px;
+.games .logos a {
+  text-decoration: none;
 }
 
-#history {
-  background-image: url("/static/images/history.jpg");
+.games .logos a:visited {
+  color: black;
 }
 
-#zelda-introtxt{
-  margin-top: 50px;
+.logos{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 500px;
   border: 5px solid black;
+  border-radius: 25px;
+  padding: 50px;
+  text-decoration: none;
+}
+
+.year {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.year a{
+  text-decoration: none;
+}
+
+#zelda-timeline {
+  background-image: url("/static/images/history.jpg");
+  padding: 150px;
+}
+
+#totk {
+  background-image: url("/static/images/totk.jpg");
 }
 
 #botw {
@@ -94,6 +137,43 @@ img {
   background-image: url("/static/images/original.jpg");
 }
 
+#mario-timeline{
+  background-image: url("/static/images/mario-history.jpg");
+  padding: 150px;
+}
+
+#odyssey{
+  background-image: url("/static/images/odyssey.jpg");
+}
+
+#galaxy2{
+  background-image: url("/static/images/galaxy2.jpg");
+}
+
+#galaxy{
+  background-image: url("/static/images/galaxy.jpg");
+}
+
+#world3d{
+  background-image: url("/static/images/world3d.jpg");
+}
+
+#sunshine{
+  background-image: url("/static/images/sunshine.jpg");
+}
+
+#sixtyfour{
+  background-image: url("/static/images/64.jpg");
+}
+
+#world{
+  background-image: url("/static/images/world.jpg")
+}
+
+#bros {
+  background-image: url("/static/images/bros.jpg")
+}
+
 #sign-up{
     text-align: center;
 }
@@ -119,7 +199,7 @@ img {
 }
 
 #main-nav a {
-  color: #ffd700;
+  color: white;
   text-decoration: none;
   font-size: 1.2rem;
   margin: 0 10px;
@@ -145,6 +225,11 @@ nav a.active {
   color: #1e1e1e;
   background: white;
 }
+
+.nav-hidden {
+  display: none;
+}
+
 
 @media
 (prefers-reduced-motion: no-preference) {

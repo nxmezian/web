@@ -1,0 +1,17 @@
+<div id="main-nav">
+    <nav>
+      <ul>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('zelda_history') }}">History</a>
+        <a href="{{ url_for('forum') }}">Forum</a>
+        {% if session["is_logged_in"] == Null %}
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+        {% endif %}
+        {% if session["is_logged_in"] == True %}
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <a href="{{ url_for('logout') }}">Log out</a>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>

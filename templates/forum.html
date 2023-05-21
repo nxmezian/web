@@ -1,18 +1,11 @@
 {% extends "forumbase.html" %}
 
 {% block main %}
-{% include "navigation_bar.html"%}
-
-
     {% if session["is_logged_in"] == True %}
-    <p class="subforum hundred">Logged in as <b>{{ session["username"] }}</b></p>
-    {% else %}
-    <p class="subforum hundred">Welcome</b></p>
+    <p class="subforum ">Logged in as <b>{{ session["username"] }}</b></p>
     {% endif %}
 
-
     {% for subforum in subforums %}
-    {{ subforum[0] }}
     <div class="subforum">
       <h1><a href="{{ url_for('subforum' , subforum_id=subforum[0]) }}">{{ subforum[1] }}</a></h1>
       <hr class="subforum-header-line">
